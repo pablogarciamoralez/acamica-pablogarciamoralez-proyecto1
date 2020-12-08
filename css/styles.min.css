@@ -6,7 +6,6 @@
 }
 
 body {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -38,6 +37,11 @@ p {
   letter-spacing: 0;
 }
 
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
 header {
   width: 100%;
   height: 44px;
@@ -66,6 +70,7 @@ header nav {
   background: #0000EC 100%;
   list-style: none;
   transition: all .5s ease-out;
+  overflow: hidden;
 }
 
 .menu li:hover {
@@ -114,6 +119,7 @@ header nav {
 #checkbox:checked ~ ul {
   opacity: 1;
   height: auto;
+  overflow: auto;
 }
 
 #checkbox:checked ~ span {
@@ -236,15 +242,19 @@ footer p {
   padding: 24px 0 16px;
 }
 
-footer div.f_links {
+footer div.f_links ul {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding-bottom: 21px;
 }
 
-footer div.f_links li {
-  padding: 11px 15px 30px;
+footer div.f_links ul li {
+  list-style: none;
+}
+
+footer div.f_links ul li i {
+  color: black;
 }
 
 .button a {
@@ -265,5 +275,6 @@ footer div.f_links li {
 .button a:hover {
   background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
   text-decoration: line-through;
+  color: white;
 }
 /*# sourceMappingURL=styles.min.css.map */
