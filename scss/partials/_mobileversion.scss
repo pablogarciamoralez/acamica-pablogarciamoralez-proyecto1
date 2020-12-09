@@ -143,10 +143,19 @@ header nav {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .seccion1 {
     padding: 29px 5% 12px;
-    p {
-        padding-top: 8px;
-        padding-bottom: 18px;
-    }  
+    
+    div.mobile {
+        p {
+            padding-top: 8px;
+            padding-bottom: 18px;
+        }
+    }
+
+    div.desktop {
+        display: none;
+    }
+    
+    
     div.button {
         padding-top: 18px;
         padding-bottom: 24px;
@@ -194,7 +203,7 @@ header nav {
     .galeria {
         display: flex;
         flex-wrap: wrap;
-        align-content: center;
+        // align-content: center;
         flex-direction: column;
     }
     .galeria img {
@@ -276,3 +285,84 @@ footer {
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+@media screen and (min-width: 1024px) {
+    //////////////////////////////HEADER//////////////////////////////
+    header {
+        padding: 20px 8%;
+    }
+
+    .menu { 
+        input, span {
+            display: none;
+        } 
+
+        ul {
+            margin-top: -5px;
+          position: static;
+          background: transparent;
+          height: auto;
+          opacity: 1;  
+        }
+
+        li {
+            padding: 5px 10px;
+            display: inline-block;
+            &:hover {
+                background: transparent;
+                // border-bottom: 2px solid black;
+                color:  #00F3BB 100%;
+            }
+           
+        }
+
+        a {
+            color: black;
+            padding: 0;
+            line-height: 1;
+            &:hover {
+                color:  #00F3BB 100%;
+            }
+        }
+        
+    }
+
+    //////////////////////////seccion1/////////////////////////////////////
+    
+    .seccion1 {
+        h1 {
+            padding-left: 100px;
+            font-size: 50px;
+        }
+        div.mobile {
+            display: none;
+        }
+        div.desktop {
+            display: block;
+            padding-left: 100px;
+            width: 60%;
+        }
+        .button {
+            margin-left: -62%;
+        }
+
+    }
+    
+    .seccion2 {
+        transform: skew(0deg, -4deg);
+        .container {
+            transform: skew(0deg, 4deg);  
+        }
+        h2 {
+            padding-top: 7%;
+        }
+        iframe {
+            width: 40%;
+        }
+        div.iframes {
+           display:flex;
+           flex-flow: row wrap;
+           justify-content: space-around; 
+        }
+    }
+
+}

@@ -139,9 +139,13 @@ header nav {
   padding: 29px 5% 12px;
 }
 
-.seccion1 p {
+.seccion1 div.mobile p {
   padding-top: 8px;
   padding-bottom: 18px;
+}
+
+.seccion1 div.desktop {
+  display: none;
 }
 
 .seccion1 div.button {
@@ -196,7 +200,6 @@ header nav {
 .seccion4 .galeria {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
   flex-direction: column;
 }
 
@@ -276,5 +279,69 @@ footer div.f_links ul li i {
   background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
   text-decoration: line-through;
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 20px 8%;
+  }
+  .menu input, .menu span {
+    display: none;
+  }
+  .menu ul {
+    margin-top: -5px;
+    position: static;
+    background: transparent;
+    height: auto;
+    opacity: 1;
+  }
+  .menu li {
+    padding: 5px 10px;
+    display: inline-block;
+  }
+  .menu li:hover {
+    background: transparent;
+    color: #00F3BB 100%;
+  }
+  .menu a {
+    color: black;
+    padding: 0;
+    line-height: 1;
+  }
+  .menu a:hover {
+    color: #00F3BB 100%;
+  }
+  .seccion1 h1 {
+    padding-left: 100px;
+    font-size: 50px;
+  }
+  .seccion1 div.mobile {
+    display: none;
+  }
+  .seccion1 div.desktop {
+    display: block;
+    padding-left: 100px;
+    width: 60%;
+  }
+  .seccion1 .button {
+    margin-left: -62%;
+  }
+  .seccion2 {
+    transform: skew(0deg, -4deg);
+  }
+  .seccion2 .container {
+    transform: skew(0deg, 4deg);
+  }
+  .seccion2 h2 {
+    padding-top: 7%;
+  }
+  .seccion2 iframe {
+    width: 40%;
+  }
+  .seccion2 div.iframes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
 /*# sourceMappingURL=styles.min.css.map */
