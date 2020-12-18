@@ -16,6 +16,7 @@ h1 {
   line-height: 42px;
   color: #060A24;
   padding-bottom: 8px;
+  width: 85%;
 }
 
 h1 span.tachado {
@@ -141,7 +142,7 @@ header nav {
 
 .seccion1 div.mobile p {
   padding-top: 8px;
-  padding-bottom: 18px;
+  padding-bottom: 36px;
 }
 
 .seccion1 div.desktop {
@@ -149,18 +150,13 @@ header nav {
 }
 
 .seccion1 div.button {
-  padding-top: 18px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .seccion2 {
   background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  padding: 10px 5% 120px;
-  transform: skew(0deg, -5deg);
-}
-
-.seccion2 .container {
-  transform: skew(0deg, 5deg);
+  padding: 24px 5% 120px;
+  clip-path: polygon(0 3%, 100% 0, 100% 96%, 0 100%);
 }
 
 .seccion2 h2 {
@@ -169,13 +165,20 @@ header nav {
   color: white;
 }
 
+.seccion2 iframe {
+  width: 100%;
+  height: 232px;
+  border: none;
+  background: transparent;
+}
+
 .seccion3 div img {
   max-width: 100%;
-  transform: translateY(-80px);
+  transform: translateY(-10%);
 }
 
 .seccion3 .texto {
-  transform: translateY(-53px);
+  transform: translateY(-18%);
   padding: 0 5%;
 }
 
@@ -204,6 +207,10 @@ header nav {
 }
 
 .seccion4 .galeria img {
+  max-width: 100%;
+}
+
+.seccion4 .galeria img img {
   max-width: 100%;
 }
 
@@ -260,30 +267,37 @@ footer div.f_links ul li i {
   color: black;
 }
 
-.button a {
-  text-decoration: none;
-  display: block;
+.button {
+  display: flex;
+  justify-content: center;
   width: 288px;
   height: 48px;
-  text-align: center;
-  padding-top: 12px;
+  border: none;
+  padding-top: 13px;
   margin: auto;
   background: #00F3BB 100%;
+}
+
+.button:hover {
+  background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  color: white;
+}
+
+.button a {
+  text-decoration: none;
   color: #000000;
   font-size: 16px;
   font-family: 'IBM Plex Mono', monospace;
-  font-weight: 550;
-}
-
-.button a:hover {
-  background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-  text-decoration: line-through;
-  color: white;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 1024px) {
   header {
-    padding: 20px 8%;
+    padding: 20px 8% 4%;
+  }
+  header img {
+    width: 36px;
+    height: 36px;
   }
   .menu input, .menu span {
     display: none;
@@ -301,7 +315,6 @@ footer div.f_links ul li i {
   }
   .menu li:hover {
     background: transparent;
-    color: #00F3BB 100%;
   }
   .menu a {
     color: black;
@@ -309,39 +322,127 @@ footer div.f_links ul li i {
     line-height: 1;
   }
   .menu a:hover {
-    color: #00F3BB 100%;
+    color: #00ffdd;
   }
   .seccion1 h1 {
-    padding-left: 100px;
+    padding-left: 14%;
     font-size: 50px;
+    width: 100%;
+    padding-bottom: 1.9%;
+  }
+  .seccion1 h1 span.puntito {
+    color: blue;
+  }
+  .seccion1 p {
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding-bottom: 4.4%;
+    width: 90%;
   }
   .seccion1 div.mobile {
     display: none;
   }
   .seccion1 div.desktop {
     display: block;
-    padding-left: 100px;
+    padding-left: 14%;
     width: 60%;
   }
-  .seccion1 .button {
-    margin-left: -62%;
+  .seccion1 div.button {
+    margin-left: 14%;
   }
   .seccion2 {
-    transform: skew(0deg, -4deg);
-  }
-  .seccion2 .container {
-    transform: skew(0deg, 4deg);
+    clip-path: polygon(0 10%, 100% 0, 100% 92%, 0 100%);
+    margin-bottom: 0.5%;
   }
   .seccion2 h2 {
-    padding-top: 7%;
+    padding-left: 14%;
+    padding-top: 14%;
+    padding-bottom: 5%;
+    font-size: 48px;
+    letter-spacing: 0;
   }
   .seccion2 iframe {
     width: 40%;
+    margin-bottom: 5%;
   }
   .seccion2 div.iframes {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+  }
+  .seccion3 div {
+    padding-bottom: 2%;
+  }
+  .seccion3 div img {
+    max-width: 30%;
+    margin-left: 13%;
+  }
+  .seccion3 div.texto {
+    max-width: 50%;
+    margin-left: 43%;
+    margin-top: -40%;
+  }
+  .seccion4 {
+    margin-top: 10%;
+  }
+  .seccion4 h2 {
+    padding-left: 14%;
+    padding-bottom: 1.9%;
+    padding-top: 3%;
+  }
+  .seccion4 div.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+  .seccion4 div.galeria img {
+    width: 33%;
+  }
+  .seccion5 h2 {
+    padding-left: 14%;
+    padding-bottom: 1.2%;
+  }
+  .seccion5 div.container {
+    margin: auto;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .seccion6 {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 25%);
+  }
+  .seccion6 h2 {
+    padding-top: 6%;
+  }
+  .seccion6 .button {
+    margin-top: 1%;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer div.f_derechos {
+    float: left;
+    padding-top: 0.9%;
+    padding-left: 6.9%;
+  }
+  footer div.f_links {
+    padding-top: 2.9%;
+    padding-bottom: 21px;
+    width: 25%;
+  }
+  footer div.f_links i:hover {
+    color: aquamarine;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .seccion3 {
+    margin-bottom: 15%;
   }
 }
 /*# sourceMappingURL=styles.min.css.map */

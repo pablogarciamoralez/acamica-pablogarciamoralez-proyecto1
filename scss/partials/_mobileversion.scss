@@ -6,7 +6,6 @@
 }
 
 body {
-    // max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -18,6 +17,7 @@ h1 {
     line-height: 42px;
     color: #060A24;
     padding-bottom: 8px;
+    width: 85%;
     span.tachado {
         text-decoration: line-through;
     }
@@ -29,7 +29,7 @@ h2 {
     line-height: 42px;
     letter-spacing: 0;
 }
-   
+
 p {
     font-size: 14px;
     font-family: 'IBM Plex Mono', monospace;
@@ -143,50 +143,54 @@ header nav {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .seccion1 {
     padding: 29px 5% 12px;
-    
+
     div.mobile {
         p {
             padding-top: 8px;
-            padding-bottom: 18px;
+            padding-bottom: 36px;
         }
     }
 
     div.desktop {
         display: none;
     }
-    
-    
+
+
     div.button {
-        padding-top: 18px;
-        padding-bottom: 24px;
+        margin-bottom: 24px;
     }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .seccion2 {
     background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-    padding: 10px 5% 120px;
-    transform: skew(0deg, -5deg);
-    .container {
-        transform: skew(0deg, 5deg);  
-    }
+    padding: 24px 5% 120px;
+    clip-path: polygon(0 3%, 100% 0, 100% 96%, 0 100%);
+
     h2 {
         padding-top: 30px;
         padding-bottom: 21px;
         color: white;
+    }
+
+    iframe {
+        width: 100%;
+        height: 232px;
+        border: none;
+        background: transparent;
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .seccion3 {
     div img {
         max-width: 100%;
-        transform: translateY(-80px);
+        transform: translateY(-10%);
     }
     .texto {
-        transform: translateY(-53px);
+        transform: translateY(-18%);
         padding: 0 5%;
     }
     h2 {
-      padding-bottom: 8px;  
+      padding-bottom: 8px;
       letter-spacing: 0;
       line-height: 42px;
     }
@@ -198,16 +202,18 @@ header nav {
 .seccion4 {
     transform: translateY(-10px);
     h2 {
-        padding: 0px 5% 14px; 
+        padding: 0px 5% 14px;
     }
     .galeria {
         display: flex;
         flex-wrap: wrap;
-        // align-content: center;
         flex-direction: column;
     }
     .galeria img {
         max-width: 100%;
+        img {
+            max-width: 100%;
+        }
     }
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -233,7 +239,7 @@ header nav {
 	background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
 	clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%);
     // margin-top: 20px;
-    
+
     padding-top: 64px;
     h2 {
         color: #fff;
@@ -252,117 +258,38 @@ footer {
         flex-direction: row;
         justify-content: space-around;
         padding-bottom: 21px;
-        
+
 
         li {
             list-style: none;
             i {
                 color: black;
-            }    
+            }
         }
     }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.button a {
-   text-decoration: none; 
-   display: block;
+.button {
+   display: flex;
+   justify-content: center;
    width: 288px;
    height: 48px;
-   text-align: center;
-   padding-top: 12px;
-   margin: auto; 
+   border: none;
+   padding-top: 13px;
+   margin: auto;
    background: #00F3BB 100%;
-   color: #000000;
-   font-size: 16px;
-   font-family: 'IBM Plex Mono', monospace;
-   font-weight: 550;
    &:hover {
        background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-       text-decoration: line-through;
        color: white;
    }
+    a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 500;
+    }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@media screen and (min-width: 1024px) {
-    //////////////////////////////HEADER//////////////////////////////
-    header {
-        padding: 20px 8%;
-    }
-
-    .menu { 
-        input, span {
-            display: none;
-        } 
-
-        ul {
-            margin-top: -5px;
-          position: static;
-          background: transparent;
-          height: auto;
-          opacity: 1;  
-        }
-
-        li {
-            padding: 5px 10px;
-            display: inline-block;
-            &:hover {
-                background: transparent;
-                // border-bottom: 2px solid black;
-                color:  #00F3BB 100%;
-            }
-           
-        }
-
-        a {
-            color: black;
-            padding: 0;
-            line-height: 1;
-            &:hover {
-                color:  #00F3BB 100%;
-            }
-        }
-        
-    }
-
-    //////////////////////////seccion1/////////////////////////////////////
-    
-    .seccion1 {
-        h1 {
-            padding-left: 100px;
-            font-size: 50px;
-        }
-        div.mobile {
-            display: none;
-        }
-        div.desktop {
-            display: block;
-            padding-left: 100px;
-            width: 60%;
-        }
-        .button {
-            margin-left: -62%;
-        }
-
-    }
-    
-    .seccion2 {
-        transform: skew(0deg, -4deg);
-        .container {
-            transform: skew(0deg, 4deg);  
-        }
-        h2 {
-            padding-top: 7%;
-        }
-        iframe {
-            width: 40%;
-        }
-        div.iframes {
-           display:flex;
-           flex-flow: row wrap;
-           justify-content: space-around; 
-        }
-    }
-
-}
